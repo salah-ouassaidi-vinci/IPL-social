@@ -20,6 +20,17 @@ describe('Email', () => {
 
             expect(actual).toBe(true);
         }); 
+
+        it("should return false when given an email with no .", () => {
+            const actual = email.isValid("salah@gmailcom");
+
+            expect(actual).toBe(false);
+        }); 
+        it("should return false when given an email with a . at the end", () => {
+            const actual = email.isValid("salah@gmailcom.");
+
+            expect(actual).toBe(false);
+        });
     });
 
     describe('c. no spaces validation', () => {

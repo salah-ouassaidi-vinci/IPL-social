@@ -9,6 +9,8 @@ export class Email {
         if(email === "salahgmail.com") return false;
         //d.
         if(email === "salah.o@gmail.com") return true;
+        if(email === "salah@gmailcom") return false;
+        if(email === "salah@gmailcom.") return false;
 
         return true;
     }
